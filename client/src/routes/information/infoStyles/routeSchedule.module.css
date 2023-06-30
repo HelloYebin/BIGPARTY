@@ -1,0 +1,119 @@
+.scheduleContainer {
+  padding-bottom: 200px;
+}
+.schedule {
+  margin-top: 0;
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  display: flex;
+}
+
+.cardWrapper {
+  width: 65%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+}
+.noteContainer {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.noteTitleWrapper {
+  background-color: #7e7e7e;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.noteTitle {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 28px;
+}
+
+.description {
+  background-color: #f5f5f5;
+  height: calc(100% - 80px);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1023px) {
+  .schedule {
+    flex-direction: column;
+    width: 80%;
+  }
+  .cardWrapper {
+    width: 100%;
+  }
+  .noteContainer {
+    width: 100%;
+    flex-direction: row;
+    position: relative;
+  }
+  .noteTitleWrapper {
+    width: 150px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .description {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    height: 100%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 18px;
+  }
+  .noteTitle {
+    font-size: 18px;
+  }
+}
+/* width 767px 반응형 모바일*/
+@media all and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .schedule {
+    width: 90%;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .noteTitleWrapper {
+    width: 70px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .noteTitle {
+    font-size: 15px;
+    padding: 0;
+  }
+  .description ol {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+}

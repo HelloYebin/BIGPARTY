@@ -1,0 +1,68 @@
+.dDay {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+.welcome {
+  text-align: center;
+}
+.countDownTime {
+  display: flex;
+  padding-left: 0px;
+}
+.countDownTime > li {
+  padding-left: 0;
+  list-style: none;
+  font-size: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.countDownTime > li:nth-child(2) {
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.countDownTime > li:nth-child(4) {
+  margin-left: 3vw;
+}
+.countDownLabel {
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+.times {
+  text-align: center;
+}
+
+.countDownTime {
+  transition: 1s;
+}
+@media screen and (max-width: 1023px) {
+  .countDownTime > li {
+    font-size: 50px;
+  }
+  .countDownLabel {
+    font-size: 15px;
+    width: 50px;
+  }
+  .welcome {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .countDownTime > li {
+    font-size: 30px;
+  }
+  .countDownTime > li:nth-child(4) {
+    display: none;
+  }
+
+  .welcome {
+    position: relative;
+    width: 100%;
+    font-size: 8px;
+  }
+}

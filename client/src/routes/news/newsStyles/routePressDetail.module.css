@@ -1,0 +1,43 @@
+.article {
+  margin-top: 0;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.imgBox {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.BodyVideo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 560px;
+  height: 405px;
+}
+.videoTitle {
+  font-weight: bold;
+  font-size: 26px;
+}
+.test {
+  height: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .article {
+    width: 90%;
+  }
+  .videoTitle {
+    font-size: 20px;
+  }
+  .BodyVideo {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .BodyVideo {
+    height: 200px;
+  }
+}

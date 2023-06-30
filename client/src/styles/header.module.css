@@ -1,0 +1,178 @@
+.headerContainer {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  width: 120px;
+  height: 80px;
+  margin-left: 30px;
+}
+
+.headerContent {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.headerList {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  right: 5em;
+  position: absolute;
+  top: 0;
+}
+
+.lists {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 150px;
+}
+
+.toApply {
+  color: white;
+  text-decoration: none;
+}
+
+.dep2 {
+  position: relative;
+  padding-left: 0;
+  margin-top: 37px;
+  background-color: #181818;
+  display: none;
+}
+
+.dep2 > li {
+  padding: 10px;
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  font-weight: normal;
+}
+
+.headerList > li:hover > .dep2 {
+  display: block;
+}
+
+.bars {
+  color: white;
+  font-size: 40px;
+  position: relative;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+  z-index: 110;
+  margin-right: 30px;
+}
+
+.hideBackGround {
+  display: none;
+}
+.showBackGround {
+  background-color: #181818;
+  position: absolute;
+  width: 100%;
+  height: 1000%;
+  z-index: 20;
+}
+.faX {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.responsiveList {
+  position: fixed;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 100px;
+  width: 100vw;
+}
+
+.resLists {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  margin: 40px;
+}
+.resLink {
+  text-decoration: none;
+}
+.resBtn {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1023px) {
+  /* width 1023px 반응형 */
+  .headerList {
+    display: none;
+  }
+  .lists {
+    font-size: 18px;
+  }
+  .headerList > li:hover > .dep2 {
+    display: none;
+  }
+  .bars {
+    display: block;
+  }
+  .logo {
+    left: 50px;
+  }
+  .resBtn {
+    color: white;
+  }
+  .resBtn:hover {
+    color: #40b649;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 모바일 가로 */
+}
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .logo {
+    width: 100px;
+    height: 60px;
+    left: 20px;
+  }
+  .bars {
+    font-size: 30px;
+  }
+  .faX {
+    font-size: 30px;
+  }
+  .headerContainer {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 281px) {
+  /* 갤럭시 폴드 */
+  .logo {
+    width: 60px;
+    height: 30px;
+    left: 20px;
+  }
+  .bars {
+    font-size: 20px;
+  }
+  .faX {
+    font-size: 20px;
+  }
+}

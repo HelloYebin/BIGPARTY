@@ -1,0 +1,36 @@
+.bannerWrapper {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: url("../image/IMG_1197.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bannerWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0.2;
+  background-color: #000;
+}
+@media screen and (max-width: 1023px) {
+  .bannerWrapper {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+@media all and (max-width: 767px) {
+  /* width 767px 반응형 모바일*/
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .bannerWrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

@@ -1,0 +1,94 @@
+.contentBody p,
+.contentBody ol,
+.contentBody ul,
+.contentBody pre,
+.contentBody blockquote,
+.contentBody h1,
+.contentBody h2,
+.contentBody h3,
+.contentBody h4,
+.contentBody h5,
+.contentBody h6 {
+  margin: 0;
+  padding: 0;
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+
+.contentBody .ql-align-right {
+  text-align: right;
+}
+.contentBody .ql-align-center {
+  text-align: center;
+}
+
+.ql-size-huge {
+  font-size: 2.5em;
+}
+.ql-size-large {
+  font-size: 1.5em;
+}
+.ql-size-small {
+  font-size: 0.75em;
+}
+.contentBody ol,
+.contentBody ul {
+  padding-left: 1.5em;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ql-editor {
+  font-size: 12px;
+  width: 800px;
+}
+.board {
+  width: 800px;
+  margin-top: 150px;
+  border: 1px solid red;
+}
+.contentBody {
+  min-height: 100px;
+  width: 800px;
+  font-size: 13px;
+  padding: 10px 15px;
+  text-align: left;
+  word-wrap: break-word;
+}
+.content {
+  width: 500px;
+  border: 1px solid black;
+}
+.writeTitle {
+  width: 790px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+.title {
+  text-align: left;
+  border: 1px solid red;
+}
+.boardContent {
+  border: 1px solid red;
+  margin-top: 150px;
+}
+.boardTop {
+  display: flex;
+}

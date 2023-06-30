@@ -1,0 +1,101 @@
+.ndContainer {
+  background-color: black;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../image/nd_Back_Image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.inviteContainer {
+  display: flex;
+  width: 80%;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.leftContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWapper {
+  width: 70%;
+  position: relative;
+}
+
+.imageWapper::after {
+  display: block;
+  content: "";
+}
+
+.inviteImg {
+  width: 100%;
+  height: 100%;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.inviteTitle {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+.invite {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+  /* width 1023px 반응형 */
+  .inviteContainer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .leftContainer {
+    width: 70%;
+  }
+  .rightContainer {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .inviteTitle {
+    font-size: 30px;
+  }
+  .invite {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .title {
+    font-size: 7vw;
+  }
+  .leftContainer {
+    width: 90%;
+  }
+  .inviteTitle {
+    font-size: 24px;
+  }
+  .invite {
+    font-size: 14px;
+  }
+}

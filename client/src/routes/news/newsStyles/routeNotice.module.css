@@ -1,0 +1,35 @@
+/* 페이지 css */
+.notice {
+  margin-top: 0;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.title {
+  text-align: center;
+}
+.contentTitle {
+  text-align: center;
+  color: gray;
+}
+
+.writeBtn {
+  color: black;
+  border: 1px solid red;
+  right: 10px;
+  position: absolute;
+}
+.contentContainer {
+  border: 2px solid black;
+  margin-top: 10px;
+  background-color: beige;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.view {
+  margin-bottom: 50px;
+}

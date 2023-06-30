@@ -1,0 +1,40 @@
+.routeNavContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.routeList {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.lists {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1023px) {
+  .lists {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}
+/*
+@media all and (max-width: 767px) {
+}*/
+@media screen and (max-width: 575px) {
+  .lists {
+    font-size: 15px;
+  }
+}

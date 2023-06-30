@@ -1,0 +1,30 @@
+.summary {
+  margin-top: 0;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  text-align: center;
+}
+.bodyImage {
+  padding-bottom: 30px;
+  width: 80%;
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .summary {
+    width: 90%;
+  }
+  .title {
+    font-size: 25px;
+  }
+}

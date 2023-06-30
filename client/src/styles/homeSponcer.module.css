@@ -1,0 +1,67 @@
+.sponcerContainer {
+  display: flex;
+  position: relative;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 130px;
+}
+
+.sponcersWrapper {
+  position: relative;
+  width: 40%;
+}
+
+.sponcersWrapper::after {
+  display: block;
+  content: "";
+  padding-bottom: 100%;
+}
+
+.sponcers {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  object-fit: cover;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.sponcers li {
+  list-style: none;
+  width: calc(100% / 3 - 20px);
+  height: calc(100% / 3 - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 10px;
+}
+
+.sponcers li img {
+  position: relative;
+  width: 75%;
+  height: 80%;
+}
+
+/* width 1023px 반응형 테블릿 */
+@media screen and (max-width: 1023px) {
+  .sponcers li img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .sponcersWrapper {
+    position: relative;
+    width: 60%;
+  }
+}

@@ -1,0 +1,31 @@
+.banner {
+  position: relative;
+  top: 0;
+  opacity: 0.8;
+}
+.booth {
+  margin-top: 0;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.title {
+  text-align: center;
+}
+@media screen and (max-width: 1023px) {
+}
+/* width 767px 반응형 모바일*/
+@media all and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .booth {
+    width: 90%;
+  }
+  .title {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,26 @@
+.appContents {
+  height: auto;
+  min-height: 95vh;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  /*스크롤바의 색상*/
+  background-color: #424242;
+  border-radius: 50px;
+}
+body::-webkit-scrollbar-track {
+  /*스크롤바 트랙 색상*/
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@font-face {
+  font-family: "Spoqa";
+  src: url("../src/fonts/SpoqaHanSansNeo-Regular.ttf") format("truetype");
+}
+
+html {
+  font-family: "Spoqa";
+}
