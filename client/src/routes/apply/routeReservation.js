@@ -3,13 +3,16 @@ import RouteBanner from "../RouteBanner";
 import styles from "./applyStyles/routeReservation.module.css";
 import thumb from "./../../image/payment_thumb.png";
 import paymentInfo from "./../../image/payment_info.png";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Axios from "axios";
 import Select from "react-select";
 import { sizeOptions } from "../../data/paymentData";
 import { useNavigate } from "react-router-dom";
+import { usePaymentStore } from "../../store/paymentInfo";
 
 export default function RouteReservation() {
+  const { addPaymentInfo } = usePaymentStore();
+
   const [buyerName, setBuyerName] = useState("");
   const [buyerTel, setBuyerTel] = useState("");
   const [buyerHeadCount, setBuyerHeadCount] = useState(1);
@@ -19,6 +22,28 @@ export default function RouteReservation() {
   const [sizeL, setSizeL] = useState(0);
   const [sizeXL, setSizeXL] = useState(0);
   const [size2XL, setSize2XL] = useState(0);
+  const [amount, setAmount] = useState(50000);
+
+  const headCountArea = useRef();
+
+  //인원수에 양수만 입력되도록
+  useEffect(() => {
+    headCountArea.current.onkeydown = function (e) {
+      if (
+        !(
+          (e.keyCode > 95 && e.keyCode < 106) ||
+          (e.keyCode > 47 && e.keyCode < 58) ||
+          e.keyCode === 8
+        )
+      ) {
+        return false;
+      }
+    };
+  }, []);
+
+  const amuntWithComma = amount
+    .toString()
+    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
   const navigate = useNavigate();
 
@@ -63,8 +88,9 @@ export default function RouteReservation() {
               sizeL: sizeL,
               sizeXL: sizeXL,
               size2XL: size2XL,
-              amount: 50000,
+              amount: amount,
             }).then(() => {
+              addPaymentInfo(buyerHeadCount, amount, mid);
               alert("입장권 구매하셨습니다.");
               navigate("/apply/result");
             });
@@ -75,7 +101,7 @@ export default function RouteReservation() {
         }
       );
     } else {
-      alert("인원수와 옷 사이즈 수를 맞춰주세요.");
+      alert("인원수와 동일하게 사이즈를 주문해주세요.");
     }
   };
 
@@ -111,9 +137,16 @@ export default function RouteReservation() {
             <input
               type="number"
               placeholder="필수입력"
-              onChange={(e) => setBuyerHeadCount(e.target.value)}
+              min={0}
+              ref={headCountArea}
+              onChange={(e) => {
+                setBuyerHeadCount(e.target.value);
+                setAmount(50000 * e.target.value);
+              }}
             />
-
+            <h4 style={{ color: "red" }}>
+              ※인원수와 동일하게 사이즈를 주문해주세요.
+            </h4>
             <h2>XS</h2>
             <Select
               className="basic-single"
@@ -181,7 +214,7 @@ export default function RouteReservation() {
             />
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h3>총 상품금액</h3>
-              <h3 style={{ color: "#40B649" }}>50,000원</h3>
+              <h3 style={{ color: "#40B649" }}>{amuntWithComma}원</h3>
             </div>
             <button className={styles.reservationBtn}>신청하기</button>
           </form>

@@ -1,0 +1,30 @@
+.confirmContainer {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fetchFailContainer {
+  width: 50%;
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.retypeBtn {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -88,6 +88,18 @@ app.post("/payment/insert", (req, res) => {
   );
 });
 
+//결제 db 가져오기
+app.post("/payment/get", (req, res) => {
+  console.log("req.body", req.body);
+  const buyerName = req.body.buyerName;
+  const buyerTel = req.body.buyerTel;
+  const sqlQuery =
+    "SELECT * FROM payment WHERE buyer_name = ? AND buyer_tel = ? AND result = 1";
+  db.query(sqlQuery, [buyerName, buyerTel], (err, result) => {
+    res.send(result);
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`running on port ${PORT}`);
 });

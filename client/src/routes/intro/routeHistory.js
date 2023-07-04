@@ -14,7 +14,7 @@ export default function RouteHistory() {
           <img src={jana} className={styles.janaPic} alt="jana"></img>
           <h1>What is Big-Party?</h1>
           <h3>
-            2001년 체코에서 우리가 만든 이 혁신적인 운동이 빠른 속도로 알려지게
+            년 체코에서 우리가 만든 이 혁신적인 운동이 빠른 속도로 알려지게
             되면서, 많은 나라들이 드디어 제대로 만든 트램폴린과 안전한 동작을
             공유하게 되었습니다. 점핑은 단순한 즐길 거리를 넘어서, 기존의 어떤
             유산소운동보다도 폭발적이고 효율적인 최고의 피트니스 종목으로

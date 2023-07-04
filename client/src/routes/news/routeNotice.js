@@ -3,7 +3,6 @@ import styles from "./newsStyles/routeNotice.module.css";
 import NoticeContent from "./noticeContent";
 import { useEffect, useState } from "react";
 import Axios from "axios";
-// import "./newsStyles/reactquill.css";
 import RouteBanner from "./../RouteBanner";
 
 export default function RouteNotice() {

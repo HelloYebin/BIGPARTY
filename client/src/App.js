@@ -18,6 +18,7 @@ import AdminRouteNotice from "./routes/news/adminRouteNotice";
 import WriteForm from "./writeForm";
 import RouteReservation from "./routes/apply/routeReservation";
 import RoutePaymentResult from "./routes/apply/routePaymentResult";
+import RouteConfirm from "./routes/apply/routeConfirm";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/apply" element={<RouteApply />} />
             <Route path="/apply/regular" element={<RouteReservation />} />
             <Route path="/apply/result" element={<RoutePaymentResult />} />
+            <Route path="/apply/confirm" element={<RouteConfirm />} />
             <Route path="/write" element={<WriteForm />} />
           </Routes>
         </div>
